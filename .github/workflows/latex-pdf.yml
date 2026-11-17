@@ -1,0 +1,35 @@
+name: Compiler les traités administratifs (LaTeX → PDF)
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'formulaire_B38.tex'
+      - 'conjecture_asterix_bureaucratie_v3.tex'
+      - '.github/workflows/latex-pdf.yml'
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer les sources
+        uses: actions/checkout@v4
+      - name: Installer LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends texlive-latex-extra texlive-lang-french
+      - name: Compiler les deux PDF
+        run: |
+          pdflatex -interaction=nonstopmode -halt-on-error conjecture_asterix_bureaucratie_v3.tex
+          pdflatex -interaction=nonstopmode -halt-on-error conjecture_asterix_bureaucratie_v3.tex
+          pdflatex -interaction=nonstopmode -halt-on-error formulaire_B38.tex
+          pdflatex -interaction=nonstopmode -halt-on-error formulaire_B38.tex
+      - name: Publier les PDF compilés
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add conjecture_asterix_bureaucratie_v3.pdf formulaire_B38.pdf
+          if ! git diff --cached --quiet; then
+            git commit -m "build: publier les documents PDF du B38 et de la conjecture"
+            git push
+          fi
