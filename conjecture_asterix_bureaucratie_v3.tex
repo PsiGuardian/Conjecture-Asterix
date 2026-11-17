@@ -1,0 +1,148 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{lmodern,amsmath,amssymb,amsthm,geometry,xcolor,hyperref,tikz,fancyhdr}
+\geometry{margin=2.4cm}
+\definecolor{bleu}{HTML}{17304F}
+\definecolor{or}{HTML}{A87723}
+\hypersetup{colorlinks=true,linkcolor=bleu}
+\pagestyle{fancy}\fancyhf{}\lhead{\small Théorie de la bureaucratie fractale}\rhead{\small Volume I}\cfoot{\thepage}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{lemme}{Lemme}
+\newtheorem{corollaire}{Corollaire}
+\newtheorem{theoreme}{Théorème}
+\theoremstyle{remark}\newtheorem*{remarque}{Remarque}
+\title{\textcolor{bleu}{\Huge La conjecture d'Astérix}\\[.4em]\large Traité de bureaucratie fractale et de convergence administrative\\[.3em]\normalsize Volume I --- Étude du cycle d'André}
+\author{Académie imaginaire des formalités interminables}
+\date{17 novembre 2026}
+\begin{document}\maketitle
+\begin{abstract}
+Nous étudions un système administratif fictif dont les demandes produisent des formulaires, lesquels produisent à leur tour de nouvelles demandes. Nous introduisons cinq lemmes, trois corollaires et un cycle non terminal, appelé \emph{cycle d'André}. L'ensemble constitue une parodie mathématique et non une description empirique des administrations réelles.
+\end{abstract}
+
+\section*{Préambule --- Aphorismes fondateurs}
+\addcontentsline{toc}{section}{Préambule --- Aphorismes fondateurs}
+\begin{center}
+\color{bleu}\large\itshape
+« Toute démarche administrative converge vers un formulaire manquant. »\\[.65em]
+« Tout formulaire manquant engendre au moins deux formulaires supplémentaires. »\\[.65em]
+« Toute procédure destinée à simplifier une procédure nécessite la création d'une nouvelle procédure. »
+\end{center}
+\medskip
+\noindent\textbf{Principe de l'annexe inaccessible.} La démonstration se trouve dans l'annexe B38 ; l'annexe B38 est indisponible ; consulter l'annexe A38 ; l'annexe A38 a été supprimée dans le cadre de la simplification administrative.
+\medskip
+\begin{center}
+\fcolorbox{or}{white}{\parbox{.87\linewidth}{\centering
+\textbf{CQFD} : Ce Qu'il Fallait Déposer.\\[.2em]
+\textbf{CQFR} : Ce Qu'il Fallait Recommencer.\\[.2em]
+\textbf{CQFD} : Ce Qu'il Faut Débourser.}}
+\end{center}
+\noindent\textbf{Observation expérimentale.} « Même Syracuse atteindra $1$ avant qu'on obtienne le B38 ! »\\
+\textbf{Avertissement.} « Dans l'administration, même le guichet ignore où se trouve le guichet. »
+\medskip
+\noindent\emph{Ces formules sont des plaisanteries et ne constituent ni des observations statistiques ni des résultats démontrés sur les administrations réelles.}
+
+\section{Conjecture fondamentale}
+\begin{conjecture}[Convergence vers le formulaire manquant]
+Toute démarche administrative converge vers un formulaire manquant.
+\end{conjecture}
+La notion de « convergence » sera comprise ici au sens humoristique : toute tentative d'achèvement rencontre une exigence documentaire supplémentaire.
+\section{Lemmes fondamentaux}
+\begin{lemme}[A38 --- Manque universel]
+Toute demande déclarée complète nécessite au moins une pièce supplémentaire.
+\end{lemme}
+\begin{lemme}[B38 --- Indisponibilité]
+L'unique agent habilité à délivrer le document recherché est en vacances.
+\end{lemme}
+\begin{lemme}[C38 --- Substitution impossible]
+Le remplaçant de l'agent absent doit être désigné par cet agent lui-même.
+\end{lemme}
+\begin{lemme}[D38 --- Simplification paradoxale]
+Toute procédure destinée à simplifier une procédure nécessite une nouvelle procédure.
+\end{lemme}
+\begin{lemme}[E38 --- Suppression créatrice]
+La suppression d'un formulaire engendre une procédure attestant sa disparition.
+\end{lemme}
+\section{Corollaires}
+\begin{corollaire}[Prolifération administrative]
+Dans le modèle où chaque formulaire manquant en engendre au moins deux, le nombre $F(n)$ de formulaires à la génération $n$ satisfait
+\[F(n+1)\ge 2F(n),\qquad F(n)\ge 2^n F(0).\]
+\end{corollaire}
+\begin{proof}
+Pour $n=0$, l'inégalité est une égalité. Si $F(n)\ge 2^nF(0)$, alors
+\[F(n+1)\ge 2F(n)\ge 2^{n+1}F(0).\]
+Le résultat suit par récurrence. Le budget des photocopies, lui, n'a pas été majoré.
+\end{proof}
+\begin{corollaire}[Remplacement circulaire]
+Si André est absent et si son remplaçant ne peut être nommé que par André, la procédure de remplacement ne possède aucune issue interne.
+\end{corollaire}
+\begin{corollaire}[Simplification divergente]
+Dans le modèle D38--E38, supprimer une formalité peut accroître le nombre de formalités nécessaires pour constater cette suppression.
+\end{corollaire}
+\section{Théorème de l'administration infinie}
+\begin{theoreme}[Cycle d'André]
+Sous les règles B38 et C38, la demande du B38 entre dans un cycle non terminal.
+\end{theoreme}
+\begin{proof}
+Pour obtenir le B38, il faut consulter André. André étant en vacances, le demandeur est renvoyé au C38. Le C38 prescrit de consulter un remplaçant, mais ce remplaçant doit être nommé par André. La demande revient donc à son état initial, sans délivrance du B38.
+\[\boxed{B38\longrightarrow C38\longrightarrow\text{André}\longrightarrow B38}\]
+\begin{center}\fbox{\Large CQFD : Ce Qu'il Fallait Déposer}\end{center}
+\end{proof}
+\section{Portrait d'une orbite administrative}
+\begin{center}
+\begin{tikzpicture}[>=stealth, every node/.style={draw=bleu,rounded corners,align=center,minimum width=3.4cm,minimum height=.75cm}]
+\node (a) at (0,3.6) {Demande initiale};
+\node (b) at (0,2.4) {Formulaire A38};
+\node (c) at (0,1.2) {Formulaire B38};
+\node (d) at (0,0) {André en vacances};
+\draw[->,thick] (a)--(b);\draw[->,thick] (b)--(c);\draw[->,thick] (c)--(d);
+\draw[->,thick,or] (d.east) -- ++(1.3,0) |- (c.east);
+\end{tikzpicture}
+\end{center}
+\begin{center}\small Figure 1 --- Cycle non terminal dit « cycle d'André ».\end{center}
+\section{Problèmes ouverts}
+\begin{enumerate}
+\item Existe-t-il une démarche administrative qui converge vers un document effectivement délivré ?
+\item Toute administration possède-t-elle un cycle d'André ?
+\item Le formulaire A38 a-t-il jamais existé, ou n'est-il qu'une hypothèse de travail ?
+\end{enumerate}
+\section{Formules annexes et conséquence administrative}
+\noindent\textbf{Théorème oral du dossier incomplet.} « Ce qu'il manque au dossier » est la seule interprétation de CQFD qui demeure vraie après le passage au guichet.\\[.5em]
+\noindent\textbf{Loi de la bureaucratie fractale.} À chaque tentative de résolution, une nouvelle formalité peut naître ; dans le modèle de prolifération, $F(n)\geq 2^nF(0)$.\\[.5em]
+\noindent\textbf{Principe de l'agent absent.} André est en vacances ; son remplaçant ne peut être nommé que par André. La boucle est complète, le dossier ne l'est pas.\\[.5em]
+\noindent\textbf{Conséquence lexicale.} « Ce Qu'il Fallait Démontrer » devient « Ce Qu'il Fallait Déposer » au guichet, puis « Ce Qu'il Fallait Recommencer » au retour du dossier.
+\section{Conclusion}
+La conjecture de Syracuse demande si toute trajectoire positive atteint $1$. La conjecture d'Astérix demande si toute démarche atteint le guichet. Dans Syracuse, le cycle $1\to4\to2\to1$ est connu ; dans notre administration fictive, même le guichet ignore où se trouve le guichet.
+\begin{center}\textcolor{or}{\large\itshape « Toute démarche administrative converge vers un formulaire manquant. »}\end{center}
+\begin{remarque}
+Les résultats sont des jeux logiques fondés sur des axiomes humoristiques. Aucune conclusion sur les administrations réelles ni sur la conjecture mathématique de Syracuse n'en découle.
+\end{remarque}
+
+\section{Bibliographie et sources administrativement recevables}
+\begin{thebibliography}{9}
+\bibitem{goscinny1976}
+René Goscinny, Albert Uderzo, avec la collaboration de Pierre Tchernia,
+\emph{Les Douze Travaux d'Astérix}, film d'animation, Studios Idéfix, 1976.
+\emph{Huitième épreuve : La Maison qui rend fou}, recherche du laissez-passer A38.
+
+\bibitem{bnf}
+Bibliothèque nationale de France, Centre national de la littérature pour la jeunesse,
+\emph{Bibliographie Astérix}, rubrique « Les 12 travaux d'Astérix »,
+notamment « La maison des fous » (Dargaud, 1976).
+
+\bibitem{dialogue}
+Correspondance privée entre deux chercheurs en bureaucratie appliquée,
+\emph{Conjecture d'Astérix : du formulaire A38 au cycle d'André},
+17 novembre 2026. Source primaire des axiomes humoristiques B38--E38,
+des corollaires et des traductions alternatives de CQFD.
+
+\bibitem{andre}
+André, \emph{Réponse à la demande de validation du présent manuscrit},
+communication attendue, date indéterminée. \textbf{Non consultable : auteur en vacances.}
+\end{thebibliography}
+\begin{center}
+\textit{Toute bibliographie incomplète devra être accompagnée du formulaire B38.}
+\end{center}
+
+\end{document}
