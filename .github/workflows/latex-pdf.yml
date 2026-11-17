@@ -17,7 +17,7 @@ jobs:
       - name: Installer LaTeX
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends texlive-latex-extra texlive-lang-french
+          sudo apt-get install -y --no-install-recommends texlive-latex-extra texlive-lang-french lmodern
       - name: Compiler les deux PDF
         run: |
           pdflatex -interaction=nonstopmode -halt-on-error conjecture_asterix_bureaucratie_v3.tex
