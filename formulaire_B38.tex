@@ -1,0 +1,63 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{lmodern,geometry,titlesec,tabularx,amsmath,amssymb,xcolor,fancyhdr,tikz}
+\geometry{margin=17mm}
+\definecolor{bureau}{HTML}{243A57}
+\definecolor{tampon}{HTML}{8C3434}
+\pagestyle{fancy}
+\fancyhf{}\lhead{\small Ministère fictif des dossiers introuvables}\rhead{\small Dossier B38/2026}\cfoot{\small Toute copie conforme nécessite l'original.\quad\thepage}
+\setlength{\parindent}{0pt}
+\titlespacing*{\section}{0pt}{7pt}{3pt}
+\newcommand{\champ}[2]{\textbf{#1}\par\vspace{2mm}\fbox{\parbox[c][#2][c]{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{\strut}}\par\vspace{2mm}}
+\begin{document}
+\begin{center}
+{\Large\bfseries\color{bureau} FORMULAIRE B38}\\[2mm]
+{\large Demande d'autorisation de demander une autorisation}\\[2mm]
+\rule{\linewidth}{1pt}\\
+\textbf{IMPORTANT :} Document à produire avant d'en connaître la nécessité.
+\end{center}
+\vspace{2mm}
+\section*{I. Identification du demandeur}
+\champ{Nom et prénom (à défaut, identité administrativement probable) :}{7mm}
+\champ{Motif de la demande (ne pas mentionner le motif réel) :}{9mm}
+\champ{Référence du formulaire A38 (obligatoire même s'il est introuvable) :}{7mm}
+\section*{II. Circuit d'habilitation}
+\begin{tabularx}{\linewidth}{|p{.06\linewidth}|X|}
+\hline
+$\square$&Je certifie avoir consulté André.\\\hline
+$\square$&Je certifie qu'André est en vacances.\\\hline
+$\square$&Je sollicite son remplaçant, sous réserve de sa désignation par André.\\\hline
+$\square$&Je dispose d'un exemplaire du B38 validé afin de demander le B38.\\\hline
+\end{tabularx}
+\vspace{2mm}
+\section*{III. Pièces justificatives obligatoires}
+\begin{tabularx}{\linewidth}{|p{.06\linewidth}|X|}
+\hline
+$\square$&Une bibliographie complète du présent formulaire.\\\hline
+$\square$&Le formulaire B38 dûment validé.\\\hline
+$\square$&Une attestation de présence d'André, signée pendant son absence.\\\hline
+$\square$&Le formulaire C38 autorisant la consultation du présent formulaire B38.\\\hline
+\end{tabularx}
+\vspace{2mm}
+\section*{IV. Décision du service compétent}
+\fbox{\begin{minipage}{.96\linewidth}\vspace{2mm}
+$\square$ Dossier incomplet \hfill $\square$ Dossier à recommencer\\[3mm]
+$\square$ Renvoyé au service d'origine \hfill $\square$ En attente d'André\\[3mm]
+\textbf{Signature de l'agent :} \dotfill\\[4mm]
+\textbf{Cachet du service :} \dotfill\vspace{2mm}
+\end{minipage}}
+\vspace{2mm}
+\begin{center}
+\fcolorbox{tampon}{white}{\parbox{.88\linewidth}{\centering\color{tampon}\bfseries
+AVIS DÉFINITIF PROVISOIRE\\[1mm]
+Toute demande de validation du B38 doit être accompagnée d'un B38 validé.}}
+\end{center}
+\vfill
+\begin{center}
+\textit{« Pour accéder à la solution, il faut avoir déjà résolu le problème. »}\\[2mm]
+\textbf{CQFD : Ce Qu'il Fallait Déposer.}\\[2mm]
+{\small Document parodique ; ne constitue pas un formulaire administratif réel.}
+\end{center}
+\end{document}
